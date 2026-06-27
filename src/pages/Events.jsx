@@ -1,0 +1,2 @@
+import {events} from '../data/events';import PageHero from '../components/common/PageHero';import EventCard from '../components/common/EventCard';
+export default function Events(){return <><PageHero index="07" kicker="Competition directory" title="Choose your competition" copy="Find the challenge that matches your discipline, assemble your team, and step onto the site."/><section className="blueprint py-20"><div className="shell grid gap-5 md:grid-cols-2 lg:grid-cols-3">{events.map(e=><EventCard event={e} key={e.slug}/>)}</div></section></>}

@@ -1,0 +1,1 @@
+export const sponsors=[{name:'BuildCore',tier:'Title Partner',mark:'BC'},{name:'CemStone',tier:'Powered By',mark:'CS'},{name:'Delta Steel',tier:'Gold Partner',mark:'DS'},{name:'UrbanGrid',tier:'Gold Partner',mark:'UG'},{name:'SurveyPro',tier:'Associate Partner',mark:'SP'},{name:'AquaStruct',tier:'Associate Partner',mark:'AS'}]

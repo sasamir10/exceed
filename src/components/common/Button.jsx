@@ -1,0 +1,2 @@
+import {Link} from 'react-router-dom';import {ArrowUpRight} from 'lucide-react';
+export default function Button({to,href,children,variant='primary',className=''}){const cls=`${variant==='primary'?'button-primary':'button-secondary'} ${className}`;const content=<>{children}<ArrowUpRight size={17}/></>;if(href)return <a className={cls} href={href} target="_blank" rel="noreferrer">{content}</a>;return <Link className={cls} to={to}>{content}</Link>}

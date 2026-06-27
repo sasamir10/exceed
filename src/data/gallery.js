@@ -1,0 +1,2 @@
+export const gallery=[
+ {title:'Load test moment',tag:'Structures',gradient:'from-orange-500/80 to-slate-950'}, {title:'The drafting bay',tag:'Design',gradient:'from-blue-500/70 to-slate-950'}, {title:'Ideas on concrete',tag:'Presentation',gradient:'from-emerald-500/70 to-slate-950'}, {title:'Under pressure',tag:'Mechanics',gradient:'from-violet-500/70 to-slate-950'}, {title:'Built together',tag:'Community',gradient:'from-rose-500/70 to-slate-950'}, {title:'Final inspection',tag:'Fieldwork',gradient:'from-yellow-500/70 to-slate-950'}]
