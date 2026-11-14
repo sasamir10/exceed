@@ -1,1 +1,17 @@
-export const announcements=[{date:'18 JAN 2026',title:'Registration portal is now open',body:'Team leaders can register for all seven competitions using the event-specific forms.'},{date:'12 JAN 2026',title:'Abstract call: Poster Producers',body:'Submit a 250-word abstract before the screening deadline.'},{date:'05 JAN 2026',title:'Civil Engineering Fest 2026 announced',body:'Three days of design, analysis, construction, and competition are coming this February.'}]
+export const announcements = [
+    {
+        date: "18 JAN 2026",
+        title: "Registration portal is now open",
+        body: "Team leaders can register for all seven competitions using the event-specific forms.",
+    },
+    {
+        date: "12 JAN 2026",
+        title: "Abstract call: Poster Producers",
+        body: "Submit a 250-word abstract before the screening deadline.",
+    },
+    {
+        date: "05 JAN 2026",
+        title: "Civil Engineering Fest 2026 announced",
+        body: "Three days of design, analysis, construction, and competition are coming this February.",
+    },
+];
