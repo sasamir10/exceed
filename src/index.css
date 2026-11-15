@@ -1,15 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root{color-scheme:dark}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#0b1117;color:#eef2f4;font-family:Inter,sans-serif}::selection{background:#f7a51a;color:#0b1117}
-@layer components{
- .shell{@apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12}
- .eyebrow{@apply font-display text-sm font-bold uppercase tracking-[.24em] text-safety}
- .section-title{@apply font-display text-4xl font-bold uppercase leading-none sm:text-5xl lg:text-6xl}
- .panel{@apply border border-white/10 bg-panel/80}
- .button-primary{@apply inline-flex items-center justify-center gap-2 bg-safety px-5 py-3 font-display text-base font-bold uppercase tracking-wider text-ink transition hover:bg-amber-300}
- .button-secondary{@apply inline-flex items-center justify-center gap-2 border border-white/25 px-5 py-3 font-display text-base font-bold uppercase tracking-wider text-white transition hover:border-safety hover:text-safety}
+:root {
+    color-scheme: dark;
 }
-.blueprint{background-image:linear-gradient(rgba(82,132,155,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(82,132,155,.08) 1px,transparent 1px);background-size:32px 32px}.fine-grid{background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:16px 16px}.clip-corner{clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%)}.hazard{background:repeating-linear-gradient(-45deg,#f7a51a 0 12px,#0b1117 12px 24px)}
-.text-stroke{-webkit-text-stroke:1px rgba(255,255,255,.5);color:transparent}
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background: #0b1117;
+    color: #eef2f4;
+    font-family: Inter, sans-serif;
+}
+::selection {
+    background: #f7a51a;
+    color: #0b1117;
+}
+@layer components {
+    .shell {
+        @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+    }
+    .eyebrow {
+        @apply font-display text-sm font-bold uppercase tracking-[.24em] text-safety;
+    }
+    .section-title {
+        @apply font-display text-4xl font-bold uppercase leading-none sm:text-5xl lg:text-6xl;
+    }
+    .panel {
+        @apply border border-white/10 bg-panel/80;
+    }
+    .button-primary {
+        @apply inline-flex items-center justify-center gap-2 bg-safety px-5 py-3 font-display text-base font-bold uppercase tracking-wider text-ink transition hover:bg-amber-300;
+    }
+    .button-secondary {
+        @apply inline-flex items-center justify-center gap-2 border border-white/25 px-5 py-3 font-display text-base font-bold uppercase tracking-wider text-white transition hover:border-safety hover:text-safety;
+    }
+}
+.blueprint {
+    background-image:
+        linear-gradient(rgba(82, 132, 155, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(82, 132, 155, 0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+.fine-grid {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 16px 16px;
+}
+.clip-corner {
+    clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%);
+}
+.hazard {
+    background: repeating-linear-gradient(
+        -45deg,
+        #f7a51a 0 12px,
+        #0b1117 12px 24px
+    );
+}
+.text-stroke {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    color: transparent;
+}

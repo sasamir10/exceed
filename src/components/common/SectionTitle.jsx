@@ -1,1 +1,15 @@
-export default function SectionTitle({eyebrow,title,copy,align='left'}){return <div className={`mb-10 ${align==='center'?'mx-auto max-w-2xl text-center':''}`}><p className="eyebrow mb-3">{eyebrow}</p><h2 className="section-title">{title}</h2>{copy&&<p className="mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">{copy}</p>}</div>}
+export default function SectionTitle({ eyebrow, title, copy, align = "left" }) {
+    return (
+        <div
+            className={`mb-10 ${align === "center" ? "mx-auto max-w-2xl text-center" : ""}`}
+        >
+            <p className="eyebrow mb-3">{eyebrow}</p>
+            <h2 className="section-title">{title}</h2>
+            {copy && (
+                <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
+                    {copy}
+                </p>
+            )}
+        </div>
+    );
+}

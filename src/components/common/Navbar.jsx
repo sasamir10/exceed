@@ -1,3 +1,73 @@
-import {useState} from 'react';import {Link,NavLink} from 'react-router-dom';import {Menu,X} from 'lucide-react';
-const links=[['Events','/events'],['Schedule','/schedule'],['Gallery','/gallery'],['Results','/results'],['Updates','/announcements'],['Contact','/contact']];
-export default function Navbar(){const [open,setOpen]=useState(false);return <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/90 backdrop-blur-xl"><div className="hazard h-1"/><div className="shell flex h-16 items-center justify-between"><Link to="/" onClick={()=>setOpen(false)} className="flex items-center gap-3"><span className="relative grid h-9 w-9 place-items-center border-2 border-safety font-display text-lg font-bold text-safety">CE<span className="absolute -bottom-1 -right-1 h-2 w-2 bg-safety"/></span><span className="font-display text-lg font-bold uppercase leading-4 tracking-wide">Civil Fest<br/><b className="text-safety">2026</b></span></Link><nav className="hidden items-center gap-6 lg:flex">{links.map(([n,p])=><NavLink key={p} to={p} className={({isActive})=>`font-display text-sm font-semibold uppercase tracking-wider transition hover:text-safety ${isActive?'text-safety':'text-slate-300'}`}>{n}</NavLink>)}<Link to="/events" className="button-primary !px-4 !py-2">Register</Link></nav><button aria-label="Toggle navigation" onClick={()=>setOpen(!open)} className="p-2 lg:hidden">{open?<X/>:<Menu/>}</button></div>{open&&<nav className="border-t border-white/10 bg-panel px-5 py-5 lg:hidden">{links.map(([n,p])=><NavLink key={p} to={p} onClick={()=>setOpen(false)} className="block border-b border-white/10 py-3 font-display text-xl font-bold uppercase">{n}</NavLink>)}</nav>}</header>}
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+const links = [
+    ["Events", "/events"],
+    ["Schedule", "/schedule"],
+    ["Gallery", "/gallery"],
+    ["Results", "/results"],
+    ["Updates", "/announcements"],
+    ["Contact", "/contact"],
+];
+export default function Navbar() {
+    const [open, setOpen] = useState(false);
+    return (
+        <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/90 backdrop-blur-xl">
+            <div className="hazard h-1" />
+            <div className="shell flex h-16 items-center justify-between">
+                <Link
+                    to="/"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-3"
+                >
+                    <span className="relative grid h-9 w-9 place-items-center border-2 border-safety font-display text-lg font-bold text-safety">
+                        CE
+                        <span className="absolute -bottom-1 -right-1 h-2 w-2 bg-safety" />
+                    </span>
+                    <span className="font-display text-lg font-bold uppercase leading-4 tracking-wide">
+                        Civil Fest
+                        <br />
+                        <b className="text-safety">2026</b>
+                    </span>
+                </Link>
+                <nav className="hidden items-center gap-6 lg:flex">
+                    {links.map(([n, p]) => (
+                        <NavLink
+                            key={p}
+                            to={p}
+                            className={({ isActive }) =>
+                                `font-display text-sm font-semibold uppercase tracking-wider transition hover:text-safety ${isActive ? "text-safety" : "text-slate-300"}`
+                            }
+                        >
+                            {n}
+                        </NavLink>
+                    ))}
+                    <Link to="/events" className="button-primary !px-4 !py-2">
+                        Register
+                    </Link>
+                </nav>
+                <button
+                    aria-label="Toggle navigation"
+                    onClick={() => setOpen(!open)}
+                    className="p-2 lg:hidden"
+                >
+                    {open ? <X /> : <Menu />}
+                </button>
+            </div>
+            {open && (
+                <nav className="border-t border-white/10 bg-panel px-5 py-5 lg:hidden">
+                    {links.map(([n, p]) => (
+                        <NavLink
+                            key={p}
+                            to={p}
+                            onClick={() => setOpen(false)}
+                            className="block border-b border-white/10 py-3 font-display text-xl font-bold uppercase"
+                        >
+                            {n}
+                        </NavLink>
+                    ))}
+                </nav>
+            )}
+        </header>
+    );
+}
