@@ -1,2 +1,59 @@
-import {CalendarDays,MapPin} from 'lucide-react';import Button from '../common/Button';
-export default function Hero(){return <section className="blueprint relative min-h-[760px] overflow-hidden pt-28"><div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(247,165,26,.13),transparent_32%)]"/><div className="absolute bottom-0 right-[-10%] h-[48%] w-[75%] border-t-2 border-safety/30 [clip-path:polygon(0_100%,18%_10%,35%_100%,52%_25%,70%_100%,86%_5%,100%_100%)] bg-safety/5"/><div className="shell relative grid min-h-[630px] items-center lg:grid-cols-[1fr_.45fr]"><div><div className="mb-8 flex items-center gap-3"><span className="h-px w-12 bg-safety"/><span className="eyebrow">Three days. Seven trials. One standard.</span></div><p className="mb-3 font-mono text-xs uppercase tracking-[.35em] text-slate-500">Blueprint ref. CEF—2026 / Rev.01</p><h1 className="font-display text-[clamp(4.5rem,12vw,9.5rem)] font-extrabold uppercase leading-[.73] tracking-[-.035em]">Civil<br/><span className="text-safety">Engineering</span><br/>Fest <span className="text-stroke">2026</span></h1><p className="mt-7 max-w-xl text-lg leading-8 text-slate-300">Design. Build. Conquer. A national arena for the engineers shaping what comes next.</p><div className="mt-8 flex flex-wrap gap-3"><Button to="/events">Explore competitions</Button><Button to="/schedule" variant="secondary">View schedule</Button></div></div><aside className="mt-12 border-l border-safety/50 pl-6 lg:mt-0"><div className="mb-7"><p className="eyebrow mb-2">Date</p><p className="flex items-center gap-3 font-display text-3xl font-bold"><CalendarDays className="text-safety"/>12—14 DEC 2026</p></div><div><p className="eyebrow mb-2">Site</p><p className="flex items-start gap-3 text-sm leading-6 text-slate-300"><MapPin className="mt-1 shrink-0 text-safety"/>Civil Engineering Complex<br/>Dhaka, Bangladesh</p></div></aside></div><div className="absolute bottom-0 left-0 right-0 hazard h-2"/></section>}
+import { CalendarDays, MapPin } from "lucide-react";
+import Button from "../common/Button";
+export default function Hero() {
+    return (
+        <section className="blueprint relative min-h-[760px] overflow-hidden pt-28">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(247,165,26,.13),transparent_32%)]" />
+            <div className="absolute bottom-0 right-[-10%] h-[48%] w-[75%] border-t-2 border-safety/30 [clip-path:polygon(0_100%,18%_10%,35%_100%,52%_25%,70%_100%,86%_5%,100%_100%)] bg-safety/5" />
+            <div className="shell relative grid min-h-[630px] items-center lg:grid-cols-[1fr_.45fr]">
+                <div>
+                    <div className="mb-8 flex items-center gap-3">
+                        <span className="h-px w-12 bg-safety" />
+                        <span className="eyebrow">
+                            Three days. Seven trials. One standard.
+                        </span>
+                    </div>
+                    <p className="mb-3 font-mono text-xs uppercase tracking-[.35em] text-slate-500">
+                        Blueprint ref. CEF—2026 / Rev.01
+                    </p>
+                    <h1 className="font-display text-[clamp(4.5rem,12vw,9.5rem)] font-extrabold uppercase leading-[.73] tracking-[-.035em]">
+                        Civil
+                        <br />
+                        <span className="text-safety">Engineering</span>
+                        <br />
+                        Fest <span className="text-stroke">2026</span>
+                    </h1>
+                    <p className="mt-7 max-w-xl text-lg leading-8 text-slate-300">
+                        Design. Build. Conquer. A national arena for the
+                        engineers shaping what comes next.
+                    </p>
+                    <div className="mt-8 flex flex-wrap gap-3">
+                        <Button to="/events">Explore competitions</Button>
+                        <Button to="/schedule" variant="secondary">
+                            View schedule
+                        </Button>
+                    </div>
+                </div>
+                <aside className="mt-12 border-l border-safety/50 pl-6 lg:mt-0">
+                    <div className="mb-7">
+                        <p className="eyebrow mb-2">Date</p>
+                        <p className="flex items-center gap-3 font-display text-3xl font-bold">
+                            <CalendarDays className="text-safety" />
+                            12—14 DEC 2026
+                        </p>
+                    </div>
+                    <div>
+                        <p className="eyebrow mb-2">Site</p>
+                        <p className="flex items-start gap-3 text-sm leading-6 text-slate-300">
+                            <MapPin className="mt-1 shrink-0 text-safety" />
+                            Civil Engineering Complex
+                            <br />
+                            Dhaka, Bangladesh
+                        </p>
+                    </div>
+                </aside>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 hazard h-2" />
+        </section>
+    );
+}
